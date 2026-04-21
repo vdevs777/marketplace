@@ -3,6 +3,7 @@ import { Platform } from "react-native";
 
 export const buildImageUrl = (originalUrl?: string) => {
   if (!originalUrl) return;
+
   if (Boolean(Constants.expoConfig?.extra?.isProduction)) {
     return originalUrl;
   }

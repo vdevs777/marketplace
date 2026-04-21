@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 import { AppModal } from "../shared/components/AppModal";
+import { AppBottomSheet } from "../shared/components/AppBottomSheet";
 
 import "../styles/global.css";
 
@@ -18,6 +19,7 @@ export default function RootLayout() {
           <Stack.Screen name="(private)" />
         </Stack>
         <AppModal />
+
         <ToastManager useModal={false} />
       </QueryClientProvider>
     </GestureHandlerRootView>

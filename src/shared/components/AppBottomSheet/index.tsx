@@ -36,7 +36,8 @@ export const AppBottomSheet = () => {
     [close],
   );
 
-  const renderBackdrop = useCallback((props: BottomSheetBackdropProps) => {
+  const renderBackdrop = (props: BottomSheetBackdropProps) => {
+    if (!isOpen || !content) return null;
     return (
       <BottomSheetBackdrop
         {...props}
@@ -46,7 +47,7 @@ export const AppBottomSheet = () => {
         pressBehavior="close"
       />
     );
-  }, []);
+  };
 
   return (
     <BottomSheet
