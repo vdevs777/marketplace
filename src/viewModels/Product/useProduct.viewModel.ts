@@ -46,7 +46,7 @@ export const useProductViewModel = (productId: number) => {
   };
 
   const onContinueShopping = () => {
-    router.push("/(private)/(tabs)/cart");
+    router.push("/(private)/(tabs)/home");
     close();
   };
 

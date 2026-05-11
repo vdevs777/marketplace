@@ -33,13 +33,10 @@ export const AddToCartSuccessModal: FC<AddToCartSuccessModalParams> = ({
         seu carrinho com sucesso!
       </Text>
       <View className="gap-3">
-        <AppButton onPress={onGoToCart} leftIcon="cart">
-          Ver carrinho
-        </AppButton>
+        <AppButton onPress={onGoToCart}>Ver carrinho</AppButton>
         <AppButton
           onPress={onContinueShopping}
           variant={AppButtonVariantsEnum.OUTLINED}
-          leftIcon="chevron-back"
         >
           Continuar comprando
         </AppButton>
