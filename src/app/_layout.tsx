@@ -7,10 +7,13 @@ import { AppModal } from "../shared/components/AppModal";
 import { AppBottomSheet } from "../shared/components/AppBottomSheet";
 
 import "../styles/global.css";
+import { useNotifications } from "../shared/hooks/useNotifications";
 
 const queryClient = new QueryClient();
 
 export default function RootLayout() {
+  useNotifications();
+
   return (
     <GestureHandlerRootView className="flex-1">
       <QueryClientProvider client={queryClient}>
